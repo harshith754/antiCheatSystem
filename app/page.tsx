@@ -99,7 +99,7 @@ const HomePage = (props: Props) => {
     }, 300);
 
     return () => clearInterval(interval); //every time state changes prev interval ets cleared and new interval runs
-  }, [webcamRef.current, model, mirrored, autoRecordEnabled]); //imp since runprediction depends on autorecord enabled
+  }, [webcamRef.current, model, mirrored, autoRecordEnabled, runPrediction]); //imp since runprediction depends on autorecord enabled
 
   async function runPrediction() {
     if (
